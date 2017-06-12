@@ -1,0 +1,21 @@
+* Create library
+  dotnet new classlib -o libname
+
+* Create unit tests for previus library
+  dotnet new xunit -o libname.unittests
+  dotnet add libname.unitests/libname.unittests.csproj reference libname/libname.csproj
+
+* Add nuget package
+  dotnet add libname.csproj package restsharp.netcore
+
+* Remove nuget package
+  dotnet remove libname.csproj package restsharp.netcore
+
+* Add project to solution
+  dotnet sln solution.sln add libname/libname.csproj
+
+* Restore a project
+  dotnet Restore
+
+* Compile a project
+  dotnet build
